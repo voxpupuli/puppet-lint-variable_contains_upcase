@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name        = 'puppet-lint-variable_contains_upcase'
-  spec.version     = '1.0.0'
+  spec.version     = '1.0.1'
   spec.homepage    = 'https://github.com/fiddyspence/puppetlint-variablecase'
   spec.license     = 'MIT'
   spec.author      = 'Chris Spence'
@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
     Extends puppet-lint to ensure that your variables are all lower case
   EOF
 
-  spec.add_dependency             'puppet-lint', '~> 1.0'
+  spec.add_dependency             'puppet-lint', '>= 1.0', '< 3.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rspec-its', '~> 1.0'
   spec.add_development_dependency 'rspec-collection_matchers', '~> 1.0'
