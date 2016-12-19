@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name        = 'puppet-lint-variable_contains_upcase'
-  spec.version     = '1.0.2'
+  spec.version     = '1.1.0'
   spec.homepage    = 'https://github.com/fiddyspence/puppetlint-variablecase'
   spec.license     = 'MIT'
   spec.author      = 'Chris Spence'
@@ -22,4 +22,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec-its', '~> 1.0'
   spec.add_development_dependency 'rspec-collection_matchers', '~> 1.0'
   spec.add_development_dependency 'rake'
+  spec.add_development_dependency 'rspec-json_expectations'
 end

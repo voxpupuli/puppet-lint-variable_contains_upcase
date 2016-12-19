@@ -8,8 +8,12 @@ PuppetLint.new_check(:variable_contains_upcase) do
           :message => 'variable contains a capital letter',
           :line    => token.line,
           :column  => token.column,
+          :token   => token,
         }
       end
     end
+  end
+  def fix(problem)
+    problem[:token].value.downcase!
   end
 end
