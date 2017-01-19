@@ -26,4 +26,31 @@ describe 'variable_contains_upcase' do
       expect(problems).to contain_warning(msg).on_line(1).in_column(3)
     end
   end
+
+  context 'with fix enabled' do
+    before do
+      PuppetLint.configuration.fix = true
+    end
+
+    after do
+      PuppetLint.configuration.fix = false
+    end
+
+    context 'fix variable containing a capital' do
+      let(:code) { '" $fOobar"' }
+
+      it 'should only detect a single problem' do
+        expect(problems).to have(1).problem
+      end
+
+      it 'should fix the manifest' do
+        expect(problems).to contain_fixed(msg).on_line(1).in_column(3)
+      end
+
+      it 'should downcase the variable name' do
+        expect(manifest).to eq('" $foobar"')
+      end
+    end
+
+  end
 end
