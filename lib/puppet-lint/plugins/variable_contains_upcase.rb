@@ -3,7 +3,7 @@ PuppetLint.new_check(:variable_contains_upcase) do
     tokens.select { |r|
       Set[:VARIABLE, :UNENC_VARIABLE].include? r.type
     }.each do |token|
-      if token.value.match(/[A-Z]/)
+      if token.value.gsub(/\[.+?\]/, '').match(/[A-Z]/)
         notify :warning, {
           :message => 'variable contains a capital letter',
           :line    => token.line,
