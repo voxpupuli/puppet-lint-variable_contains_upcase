@@ -52,5 +52,26 @@ describe 'variable_contains_upcase' do
       end
     end
 
+    context 'a hash with an upcase key should not fail' do
+      let(:code) { ' $myhash["Foo"]' }
+
+      it 'should not detect a single problem' do
+        expect(problems).to have(0).problem
+      end
+    end
+    context 'a hash with an upcase key should not fail' do
+      let(:code) { ' $myhash["Foo"]["bAr"]' }
+
+      it 'should not detect a single problem' do
+        expect(problems).to have(0).problem
+      end
+    end
+    context 'a hash variable with an upcase key should fail' do
+      let(:code) { ' $myHash["foo"]["bar"]' }
+
+      it 'should detect a single problem' do
+        expect(problems).to have(1).problem
+      end
+    end
   end
 end
