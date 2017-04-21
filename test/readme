@@ -1,0 +1,6 @@
+To test the fix functionality of this plugin, open a terminal in this folder and run:
+
+puppet-lint --only-checks variable_contains_upcase --fix test.pp
+
+The test should find uppercases in variables on lines 1 and 3.  Examining test.pp after
+running the test should show that the variable $FileName has been changed to $filename.
