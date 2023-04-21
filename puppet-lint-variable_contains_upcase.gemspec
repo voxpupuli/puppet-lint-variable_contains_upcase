@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name = 'puppet-lint-variable_contains_upcase'
-  spec.version     = '1.4.0'
+  spec.version     = '2.0.0'
   spec.homepage    = 'https://github.com/fiddyspence/puppetlint-variablecase'
   spec.license     = 'MIT'
   spec.author      = ['Chris Spence', 'Vox Pupuli']
