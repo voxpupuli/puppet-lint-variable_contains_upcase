@@ -3,8 +3,8 @@ Gem::Specification.new do |spec|
   spec.version     = '1.4.0'
   spec.homepage    = 'https://github.com/fiddyspence/puppetlint-variablecase'
   spec.license     = 'MIT'
-  spec.author      = 'Chris Spence'
-  spec.email       = 'chris@spence.org.uk'
+  spec.author      = ['Chris Spence', 'Vox Pupuli']
+  spec.email       = 'voxpupuli@groups.io'
   spec.files       = Dir[
     'README.md',
     'LICENSE',
