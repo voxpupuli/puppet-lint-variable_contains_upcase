@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
     Extends puppet-lint to ensure that your variables are all lower case
   EOF
 
-  spec.required_ruby_version = '>= 2.7.0'
+  spec.required_ruby_version = '>= 3.2'
 
-  spec.add_dependency 'puppet-lint', '>= 3', '< 5'
+  spec.add_dependency 'puppet-lint', '~> 5.1'
 end
